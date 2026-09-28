@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The top five games, ranked with a short explanation for each pick.">
+  <title>Five Games | Rankings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="index.html">FIVE GAMES<span>.</span></a>
+    <!-- The nav element groups links to all four pages in the site header. -->
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="rankings.html" aria-current="page">Rankings</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro page-intro">
+      <p class="eyebrow">The list, in order</p>
+      <h1>Five picks, ranked.</h1>
+      <p class="intro-copy">A little bit of everything, from a world you can build yourself to a race you can run again immediately.</p>
+    </section>
+
+    <section class="rankings-content" aria-label="Ranked game list">
+      <!-- The ol element communicates that these five games have a meaningful ranked order. -->
+      <ol class="ranking-list">
+        <!-- The class attribute applies consistent layout to each repeated ranking entry. -->
+        <!-- Each id attribute uniquely identifies a game so other pages can link to it. -->
+        <li class="ranking-item" id="rank-minecraft">
+          <span class="ranking-number" aria-hidden="true">01</span>
+          <div><h2 class="ranking-title">Marvel Tokon: Fighting Souls</h2><p>Marvel's Ultimate 4v4 Fighting Game.</p></div>
+          <span class="ranking-aside">Fighting · Action</span>
+        </li>
+        <li class="ranking-item" id="rank-stardew-valley">
+          <span class="ranking-number" aria-hidden="true">02</span>
+          <div><h2 class="ranking-title">Stardew Valley</h2><p>Farming, friendships, and gradual progress give this small-town world an easy rhythm.</p></div>
+          <span class="ranking-aside">Simulation · Cozy</span>
+        </li>
+        <li class="ranking-item" id="rank-breath-of-the-wild">
+          <span class="ranking-number" aria-hidden="true">03</span>
+          <div><h2 class="ranking-title">The Legend of Zelda: Breath of the Wild</h2><p>Exploration feels rewarding because the world invites detours and experimentation.</p></div>
+          <span class="ranking-aside">Adventure · Open world</span>
+        </li>
+        <li class="ranking-item" id="rank-portal-2">
+          <span class="ranking-number" aria-hidden="true">04</span>
+          <div><h2 class="ranking-title">Portal 2</h2><p>Memorable puzzles make clever use of a simple idea: connecting two points with portals.</p></div>
+          <span class="ranking-aside">Puzzle · Sci-fi</span>
+        </li>
+        <li class="ranking-item" id="rank-mario-kart-8">
+          <span class="ranking-number" aria-hidden="true">05</span>
+          <div><h2 class="ranking-title">Mario Kart 8 Deluxe</h2><p>Colorful courses and quick races make it an easy game to share with other players.</p></div>
+          <span class="ranking-aside">Racing · Multiplayer</span>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>FIVE GAMES.</span><span>A personal player’s guide</span></footer>
+</body>
+</html>

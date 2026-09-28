@@ -1,0 +1,510 @@
+:root {
+  color-scheme: light;
+  --paper: #f3f0e6;
+  --paper-light: #fbf9f1;
+  --ink: #1c2821;
+  --green: #174d3d;
+  --green-soft: #dce8d8;
+  --lime: #d8ee68;
+  --coral: #d9684b;
+  --muted: #69736a;
+  --rule: #c9c9b9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  min-height: 76px;
+  padding: 0 max(6vw, calc((100vw - 1120px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: var(--green);
+  color: var(--paper-light);
+}
+
+.site-name {
+  color: var(--paper-light);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-name span,
+.site-footer span:first-child {
+  color: var(--lime);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-nav a {
+  padding: 9px 12px;
+  border-radius: 2px;
+  color: var(--paper-light);
+  font-size: 0.91rem;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.page-shell {
+  width: min(100% - 48px, 1040px);
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 76px 0 48px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.intro-home {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+  column-gap: 64px;
+  align-items: end;
+}
+
+.intro-home .eyebrow,
+.intro-home h1 {
+  grid-column: 1;
+}
+
+.intro-home .intro-copy {
+  grid-column: 1;
+  max-width: 520px;
+  margin-bottom: 0;
+}
+
+.intro-home .game-search {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: end;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--coral);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+.section-heading h2,
+.about-section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 20px;
+  font-size: clamp(2.8rem, 7vw, 5.4rem);
+  line-height: 0.98;
+}
+
+.page-intro h1 {
+  max-width: 840px;
+}
+
+.intro-copy {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.game-search {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  background: var(--green-soft);
+}
+
+.game-search label {
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.game-search input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid #8c9b88;
+  border-radius: 2px;
+  background: var(--paper-light);
+  color: var(--ink);
+  font: inherit;
+}
+
+.game-search input:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 2px;
+}
+
+.search-status {
+  min-height: 1.5em;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.home-ranking {
+  padding: 44px 0 80px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 5px;
+}
+
+.section-heading h2,
+.about-section h2 {
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.game-list {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.game-entry {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  min-height: 126px;
+  padding: 22px 12px 22px 8px;
+  border-top: 1px solid var(--rule);
+}
+
+.game-entry:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.game-entry::marker {
+  color: var(--coral);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.game-entry[hidden] {
+  display: none;
+}
+
+.game-genre {
+  justify-self: start;
+  padding: 5px 9px;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 0.73rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.game-entry h3,
+.review h2 {
+  margin-bottom: 5px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.game-entry p,
+.review p {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.text-link {
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.text-link:hover {
+  color: var(--coral);
+}
+
+.text-link span {
+  color: var(--coral);
+}
+
+.page-intro {
+  padding-bottom: 42px;
+}
+
+.page-intro .intro-copy {
+  margin-bottom: 0;
+}
+
+.rankings-content,
+.reviews-content,
+.about-content {
+  padding: 44px 0 82px;
+}
+
+.ranking-list {
+  counter-reset: ranking;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ranking-item {
+  counter-increment: ranking;
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr) 160px;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.ranking-item:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.ranking-number {
+  color: var(--coral);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.7rem;
+  line-height: 1;
+}
+
+.ranking-title {
+  margin-bottom: 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.ranking-item p {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.ranking-aside {
+  justify-self: end;
+  color: var(--green);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 28px;
+  padding: 30px 0;
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: 24px;
+}
+
+.review:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.review-meta {
+  color: var(--coral);
+  font-size: 0.79rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.review-meta p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.review h2 {
+  font-size: 1.8rem;
+}
+
+.review .review-summary {
+  margin-bottom: 12px;
+  color: var(--ink);
+  font-size: 1.04rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.58fr);
+  gap: 72px;
+}
+
+.about-section {
+  padding: 0 0 34px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 34px;
+}
+
+.about-section h2 {
+  margin-bottom: 14px;
+}
+
+.about-section p {
+  max-width: 650px;
+  color: var(--muted);
+}
+
+.about-aside {
+  align-self: start;
+  padding: 20px 0 20px 22px;
+  border-left: 4px solid var(--coral);
+}
+
+.about-aside h2 {
+  margin-bottom: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.about-aside p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px max(6vw, calc((100vw - 1120px) / 2));
+  background: var(--green);
+  color: var(--paper-light);
+  font-size: 0.82rem;
+}
+
+.site-footer span:first-child {
+  font-weight: 800;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 24px;
+  }
+
+  .site-nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .site-nav a {
+    padding: 7px 9px;
+  }
+
+  .page-shell {
+    width: min(100% - 36px, 1040px);
+  }
+
+  .intro {
+    padding-top: 52px;
+  }
+
+  .intro-home {
+    display: block;
+  }
+
+  .intro-home .game-search {
+    margin-top: 28px;
+  }
+
+  .game-entry {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 18px 6px;
+  }
+
+  .game-genre {
+    grid-column: 1 / -1;
+  }
+
+  .game-entry > div {
+    grid-column: 1 / -1;
+  }
+
+  .game-entry .text-link {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .ranking-item {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .ranking-aside {
+    grid-column: 2;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .review {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .site-footer {
+    padding: 20px 24px;
+  }
+}
