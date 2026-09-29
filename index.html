@@ -32,7 +32,7 @@
       <!-- The search element is an HTML5 semantic container from MDN. It groups the homepage
            search box so the input is clearly associated with a specific interactive feature on the page. -->
       <search class="game-search">
-        <label for="game-search">Type your game and press Enter</label>
+        <label for="game-search">Search games as you type</label>
         <input id="game-search" type="search" placeholder="Type your game" autocomplete="off">
       </search>
     </section>
@@ -107,7 +107,6 @@
   <!-- The footer element is an MDN landmark used to mark the end of the page content.
        It is used here for site branding and identity after the main content. -->
   <footer class="site-footer"><span>Ten GAMES.</span><span>CIT 384 Project 1</span></footer>
-  <!-- The live search requires JavaScript, which is outside the material covered so far.
   <script>
     // This script filters the game list as the user types and updates the number of matching games.
     const searchInput = document.querySelector('#game-search');
@@ -115,29 +114,6 @@
     const searchStatus = document.querySelector('#search-status');
 
     searchInput.addEventListener('input', () => {
-      const query = searchInput.value.trim().toLowerCase();
-      let visibleCount = 0;
-
-      gameEntries.forEach((entry) => {
-        const matches = entry.textContent.toLowerCase().includes(query);
-        entry.hidden = !matches;
-        if (matches) visibleCount += 1;
-      });
-
-      searchStatus.textContent = query
-        ? `${visibleCount} ${visibleCount === 1 ? 'game' : 'games'} found`
-        : `Showing all ${gameEntries.length} games`;
-    });
-  </script> -->
-  <script>
-    // This script searches the game list only after the user presses Enter.
-    const searchInput = document.querySelector('#game-search');
-    const gameEntries = document.querySelectorAll('.game-entry');
-    const searchStatus = document.querySelector('#search-status');
-
-    searchInput.addEventListener('keydown', (event) => {
-      if (event.key !== 'Enter') return;
-
       const query = searchInput.value.trim().toLowerCase();
       let visibleCount = 0;
 
