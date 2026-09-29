@@ -16,6 +16,7 @@
   font-synthesis: none;
 }
 
+/* Keep padding and borders inside declared sizes so grid dimensions stay predictable. */
 * {
   box-sizing: border-box;
 }
@@ -129,6 +130,7 @@ a {
   text-transform: uppercase;
 }
 
+/* Reset shared top margins; component rules below set the page's vertical rhythm. */
 h1,
 h2,
 h3,
@@ -183,6 +185,7 @@ h1 {
   font: inherit;
 }
 
+/* Make keyboard focus easy to spot while moving through the search control. */
 .game-search input:focus-visible {
   outline: 3px solid var(--coral);
   outline-offset: 2px;
@@ -319,7 +322,7 @@ h1 {
      genre tag so the list remains readable and evenly spaced while preserving the numeric order. */
   counter-increment: ranking;
   display: grid;
-  grid-template-columns: 78px minmax(0, 1fr) 160px;
+  grid-template-columns: 78px 88px minmax(0, 1fr) 160px;
   align-items: center;
   gap: 24px;
   padding: 24px 0;
@@ -359,12 +362,30 @@ h1 {
   text-align: right;
 }
 
+/* Fixed thumbnail boxes crop artwork; object-position shifts the crop for specific covers. */
+.game-cover {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--rule);
+  object-fit: cover;
+  object-position: center;
+}
+
+.ranking-cover {
+  width: 88px;
+  height: 116px;
+}
+
+.cover-tokon {
+  object-position: 72% center;
+}
+
 .review {
-  /* Each review is styled as a two-column layout so the left side can hold the category metadata
+  /* Each review is styled as a three-column layout so the left side can hold the category metadata
      while the right side keeps the longer review text easy to scan. The scroll-margin-top helps
      anchor links land cleanly when a review is opened from another page. */
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
+  grid-template-columns: 88px 150px minmax(0, 1fr);
   gap: 28px;
   padding: 30px 0;
   border-top: 1px solid var(--rule);
@@ -373,6 +394,10 @@ h1 {
 
 .review:last-child {
   border-bottom: 1px solid var(--rule);
+}
+
+.review-cover {
+  height: 116px;
 }
 
 .review-meta {
@@ -509,20 +534,36 @@ h1 {
     justify-self: start;
   }
 
+  /* Keep the rank, cover, and title in one compact row on narrow screens. */
   .ranking-item {
-    grid-template-columns: 54px minmax(0, 1fr);
-    gap: 14px;
+    grid-template-columns: 52px 62px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .ranking-cover {
+    width: 62px;
+    height: 82px;
   }
 
   .ranking-aside {
-    grid-column: 2;
+    grid-column: 3;
     justify-self: start;
     text-align: left;
   }
 
+  /* Place cover and metadata together, with the longer review copy below them. */
   .review {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 10px 14px;
+  }
+
+  .review-cover {
+    width: 80px;
+    height: 106px;
+  }
+
+  .review > div:last-child {
+    grid-column: 1 / -1;
   }
 
   .about-grid {
