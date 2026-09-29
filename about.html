@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="About this personal collection of favorite video games.">
-  <title>Five Games | About</title>
+  <title>Ten Games | About</title>
   <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="site-name" href="index.html">FIVE GAMES<span>.</span></a>
-    <!-- The nav element groups links to all four pages in the site header. -->
+    <a class="site-name" href="index.html">TEN GAMES<span>.</span></a>
+    <!-- The nav element is an MDN semantic landmark. It groups the main site links together so
+         users can move between the pages in a clear and consistent way. -->
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="rankings.html">Rankings</a>
@@ -19,6 +20,8 @@
     </nav>
   </header>
 
+  <!-- The main element is an MDN landmark that marks the primary content of the page.
+       It helps define the main informational area for this About page. -->
   <main class="page-shell">
     <section class="intro page-intro">
       <p class="eyebrow">About this list</p>
@@ -29,10 +32,12 @@
     <section class="about-content">
       <div class="about-grid">
         <div>
+          <!-- The section element groups related information into distinct content blocks.
+               This keeps the page readable and makes the structure easier to navigate. -->
           <section class="about-section">
             <p class="eyebrow">The idea</p>
             <h2>A list with a little variety</h2>
-            <p>The five picks cover a mix of genres that represent different eras of my journey playing video games.</p>
+            <p>These ten picks cover a mix of genres that represent different eras of my journey playing video games.</p>
           </section>
           <section class="about-section">
             <p class="eyebrow">How to explore</p>
@@ -40,6 +45,8 @@
             <p>Visit the rankings page for the complete ordered list, or head to reviews for a closer look at each game. The homepage search can also narrow the list by title or genre.</p>
           </section>
         </div>
+        <!-- The aside element is a semantic MDN section used here for supporting information
+             related to the main content but not the main focus of the page. -->
         <aside class="about-aside">
           <p class="eyebrow">A note on the picks</p>
           <h2>Ranked in IMO</h2>
@@ -49,6 +56,8 @@
     </section>
   </main>
 
-  <footer class="site-footer"><span>FIVE GAMES.</span><span>A personal player’s guide</span></footer>
+  <!-- The footer element is an MDN landmark used to mark the end of the page content.
+       It is used here for site branding and identity after the About section. -->
+  <footer class="site-footer"><span>TEN GAMES.</span><span>CIT 384 Project 1</span></footer>
 </body>
 </html>

@@ -1,4 +1,7 @@
 :root {
+  /* CSS custom properties are a MDN-supported feature that stores reusable values.
+     These variables are defined here and used throughout the site for colors, spacing,
+     and typography so the design stays consistent across all pages. */
   color-scheme: light;
   --paper: #f3f0e6;
   --paper-light: #fbf9f1;
@@ -29,6 +32,9 @@ a {
 }
 
 .site-header {
+  /* The flexbox layout is a core CSS feature from MDN used here to align the brand
+     and main navigation across the top of every page. This keeps the header easy to
+     read and keeps the layout responsive on smaller screens. */
   min-height: 76px;
   padding: 0 max(6vw, calc((100vw - 1120px) / 2));
   display: flex;
@@ -74,6 +80,9 @@ a {
 }
 
 .page-shell {
+  /* This centered container keeps the content narrow on large screens while still using the
+     full width of the browser on smaller screens. The min() function is a modern CSS feature
+     that helps keep responsive spacing clean without needing extra wrapper divs. */
   width: min(100% - 48px, 1040px);
   margin: 0 auto;
 }
@@ -84,6 +93,9 @@ a {
 }
 
 .intro-home {
+  /* The homepage intro uses CSS Grid to split the section into a text area and a search panel.
+     The two-column layout gives the heading room on the left while keeping the search box aligned
+     neatly on the right. */
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
   column-gap: 64px;
@@ -102,6 +114,8 @@ a {
 }
 
 .intro-home .game-search {
+  /* This places the search panel in the right column and spans multiple grid rows so it lines up
+     visually with the intro text and feels like part of the same section block. */
   grid-column: 2;
   grid-row: 1 / span 3;
   align-self: end;
@@ -210,6 +224,9 @@ h1 {
 }
 
 .game-entry {
+  /* Each homepage list item is arranged as a three-column grid: the genre label, the game info,
+     and the review link. This creates a clean, consistent card layout without needing a more
+     complex nested structure in the HTML. */
   display: grid;
   grid-template-columns: 86px minmax(0, 1fr) auto;
   align-items: center;
@@ -298,6 +315,8 @@ h1 {
 }
 
 .ranking-item {
+  /* The ranking page uses a similar grid pattern, but the right column is reserved for the
+     genre tag so the list remains readable and evenly spaced while preserving the numeric order. */
   counter-increment: ranking;
   display: grid;
   grid-template-columns: 78px minmax(0, 1fr) 160px;
@@ -341,6 +360,9 @@ h1 {
 }
 
 .review {
+  /* Each review is styled as a two-column layout so the left side can hold the category metadata
+     while the right side keeps the longer review text easy to scan. The scroll-margin-top helps
+     anchor links land cleanly when a review is opened from another page. */
   display: grid;
   grid-template-columns: 150px minmax(0, 1fr);
   gap: 28px;
@@ -378,6 +400,8 @@ h1 {
 }
 
 .about-grid {
+  /* This layout creates a main content column and a smaller side note column. The sidebar stays
+     narrow while the main text keeps a roomy reading area, which makes the About page feel balanced. */
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 0.58fr);
   gap: 72px;
@@ -431,6 +455,8 @@ h1 {
 }
 
 @media (max-width: 700px) {
+  /* The mobile media query rearranges the layout for smaller screens by stacking the header,
+     expanding the cards, and collapsing the multi-column grids into a single-column flow. */
   .site-header {
     align-items: flex-start;
     flex-direction: column;

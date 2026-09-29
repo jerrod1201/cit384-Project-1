@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A personal top five list of favorite video games.">
-  <title>Five Games | Home</title>
+  <meta name="description" content="A personal top ten list of favorite video games.">
+  <title>Ten Games | Home</title>
   <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="site-name" href="index.html">FIVE GAMES<span>.</span></a>
-    <!-- The nav element groups links to all four pages in the site header. -->
+    <a class="site-name" href="index.html">TEN GAMES<span>.</span></a>
+    <!-- The nav element is an MDN semantic landmark. It groups the main site links together so
+         users can move between the pages in a clear and consistent way. -->
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
       <a href="rankings.html">Rankings</a>
@@ -19,28 +20,35 @@
     </nav>
   </header>
 
+  <!-- The main element is an MDN landmark that identifies the primary content of the page.
+       It helps screen readers and browsers understand where the main information starts. -->
   <main class="page-shell">
+    <!-- The section element groups related content into one logical area on the homepage.
+         The class attribute applies the intro-home styling, and the heading structure keeps the content organized. -->
     <section class="intro intro-home">
       <p class="eyebrow">A personal games shortlist</p>
-      <h1>Five games.<br>Five different worlds.</h1>
-      <p class="intro-copy">A ranked collection of memorable adventures, cozy routines, clever puzzles, and friendly competition.</p>
-      <!-- The search element groups the title search control on the homepage. -->
+      <h1>Ten games.<br>Ten different worlds.</h1>
+      <p class="intro-copy">A ranked collection of memorable story-telling, immersive worlds, challenging gameplay, and friendly competition.</p>
+      <!-- The search element is an HTML5 semantic container from MDN. It groups the homepage
+           search box so the input is clearly associated with a specific interactive feature on the page. -->
       <search class="game-search">
-        <label for="game-search">Find a game</label>
-        <input id="game-search" type="search" placeholder="Search the five picks" autocomplete="off">
+        <label for="game-search">Type your game and press Enter</label>
+        <input id="game-search" type="search" placeholder="Type your game" autocomplete="off">
       </search>
     </section>
 
-    <!-- The role attribute announces changing search results as a status update. -->
-    <p class="search-status" id="search-status" role="status" aria-live="polite">Showing all 5 games</p>
+    <!-- The role attribute is an MDN-supported HTML attribute. It is used here on the status
+         message so assistive technology knows the text updates when the list changes. -->
+    <p class="search-status" id="search-status" role="status" aria-live="polite">Showing all 10 games</p>
 
     <section class="home-ranking" aria-labelledby="list-heading">
       <div class="section-heading">
         <p class="eyebrow">The shortlist</p>
-        <h2 id="list-heading">Start with the top five</h2>
+        <h2 id="list-heading">Start with the top Ten</h2>
       </div>
-      <!-- The ol element presents the games in ranked order; each li uses the game-entry class for shared styling. -->
-      <!-- The id attribute uniquely identifies each game entry for direct links. -->
+      <!-- The ol element is an ordered list from MDN. It is used here because the game entries
+           are intentionally ranked in order. The class attribute applies the same styling to every item,
+           and the id attribute gives each game its own anchor target for direct links. -->
       <ol class="game-list">
         <li class="game-entry" id="marvel-tokon-fighting-souls">
           <span class="game-genre">Fighting</span>
@@ -67,11 +75,39 @@
           <div><h3>Call of Duty: Black Ops 1</h3><p>The numbers Mason, What do they Mean?!</p></div>
           <a class="text-link" href="reviews.html#call-of-duty-black-ops-1-review">Read review <span aria-hidden="true">↗</span></a>
         </li>
+        <li class="game-entry" id="cyberpunk-2077">
+          <span class="game-genre">Role-playing</span>
+          <div><h3>Cyberpunk 2077</h3><p>A neon city full of danger, choice, and unforgettable characters.</p></div>
+          <a class="text-link" href="reviews.html#cyberpunk-2077-review">Read review <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="game-entry" id="lego-star-wars-the-complete-saga">
+          <span class="game-genre">Action-adventure</span>
+          <div><h3>Lego Star Wars: The Complete Saga</h3><p>A playful tour through the classic Star Wars stories with plenty of building and humor.</p></div>
+          <a class="text-link" href="reviews.html#lego-star-wars-review">Read review <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="game-entry" id="red-dead-redemption-2">
+          <span class="game-genre">Western</span>
+          <div><h3>Red Dead Redemption 2</h3><p>A richly detailed journey through the final days of the American frontier.</p></div>
+          <a class="text-link" href="reviews.html#red-dead-redemption-2-review">Read review <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="game-entry" id="tony-hawk-underground-2">
+          <span class="game-genre">Sports</span>
+          <div><h3>Tony Hawk Underground 2</h3><p>Fast skating, creative parks, and a chaotic road trip with a memorable crew.</p></div>
+          <a class="text-link" href="reviews.html#tony-hawk-underground-2-review">Read review <span aria-hidden="true">↗</span></a>
+        </li>
+        <li class="game-entry" id="star-wars-battlefront-2-classic-2005">
+          <span class="game-genre">Shooter</span>
+          <div><h3>Star Wars Battlefront 2 (Classic 2005)</h3><p>Large-scale Star Wars battles with memorable maps, heroes, and space combat.</p></div>
+          <a class="text-link" href="reviews.html#star-wars-battlefront-2-review">Read review <span aria-hidden="true">↗</span></a>
+        </li>
       </ol>
     </section>
   </main>
 
-  <footer class="site-footer"><span>FIVE GAMES.</span><span>A personal player’s guide</span></footer>
+  <!-- The footer element is an MDN landmark used to mark the end of the page content.
+       It is used here for site branding and identity after the main content. -->
+  <footer class="site-footer"><span>Ten GAMES.</span><span>CIT 384 Project 1</span></footer>
+  <!-- The live search requires JavaScript, which is outside the material covered so far.
   <script>
     // This script filters the game list as the user types and updates the number of matching games.
     const searchInput = document.querySelector('#game-search');
@@ -79,6 +115,29 @@
     const searchStatus = document.querySelector('#search-status');
 
     searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      gameEntries.forEach((entry) => {
+        const matches = entry.textContent.toLowerCase().includes(query);
+        entry.hidden = !matches;
+        if (matches) visibleCount += 1;
+      });
+
+      searchStatus.textContent = query
+        ? `${visibleCount} ${visibleCount === 1 ? 'game' : 'games'} found`
+        : `Showing all ${gameEntries.length} games`;
+    });
+  </script> -->
+  <script>
+    // This script searches the game list only after the user presses Enter.
+    const searchInput = document.querySelector('#game-search');
+    const gameEntries = document.querySelectorAll('.game-entry');
+    const searchStatus = document.querySelector('#search-status');
+
+    searchInput.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter') return;
+
       const query = searchInput.value.trim().toLowerCase();
       let visibleCount = 0;
 

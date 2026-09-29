@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The top five games, ranked with a short explanation for each pick.">
-  <title>Five Games | Rankings</title>
+  <meta name="description" content="The top ten games, ranked with a short explanation for each pick.">
+  <title>Ten Games | Rankings</title>
   <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="site-name" href="index.html">FIVE GAMES<span>.</span></a>
-    <!-- The nav element groups links to all four pages in the site header. -->
+    <a class="site-name" href="index.html">TEN GAMES<span>.</span></a>
+    <!-- The nav element is an MDN semantic landmark. It groups the main site links together so
+         users can move between the pages in a clear and consistent way. -->
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="rankings.html" aria-current="page">Rankings</a>
@@ -19,19 +20,27 @@
     </nav>
   </header>
 
+  <!-- The main element is an MDN landmark that marks the primary content of the page.
+       It helps define the main information area so the ranked list is easy to focus on. -->
   <main class="page-shell">
     <section class="intro page-intro">
       <p class="eyebrow">The list, in order</p>
-      <h1>Five picks, ranked.</h1>
-      <p class="intro-copy">A little bit of everything, from survival horror and open-world exploration to competitive fast-paced shooters and fighting games.</p>
+      <h1>Ten picks, ranked.</h1>
+      <p class="intro-copy">A little bit of everything, from survival horror and open-world exploration to competitive shooters, fighting games, and story-driven adventures.</p>
     </section>
 
+    <!-- The section element groups related content into one logical area.
+         The aria-label attribute gives this section an accessible name for screen readers. -->
     <section class="rankings-content" aria-label="Ranked game list">
-      <!-- The ol element communicates that these five games have a meaningful ranked order. -->
+      <!-- The ol element is an ordered list from MDN. It is used here because the games are ranked
+           from best to worst in a deliberate order. The class attribute applies the same styling to
+           each ranking item, and the id attribute gives each item a unique anchor target. -->
       <ol class="ranking-list">
-        <!-- The class attribute applies consistent layout to each repeated ranking entry. -->
-        <!-- Each id attribute uniquely identifies a game so other pages can link to it. -->
+        <!-- The class attribute applies the same layout styling to each repeated ranking entry. -->
+        <!-- The id attribute uniquely identifies each game so other pages can link directly to it. -->
         <li class="ranking-item" id="rank-marvel-tokon-fighting-souls">
+          <!-- The aria-hidden attribute is an MDN accessibility feature used here to hide decorative
+               numbering from screen readers while keeping the visual ranking visible to sighted users. -->
           <span class="ranking-number" aria-hidden="true">01</span>
           <div><h2 class="ranking-title">Marvel Tokon: Fighting Souls</h2><p>Marvel's Ultimate 4v4 Fighting Game.</p></div>
           <span class="ranking-aside">Fighting · Action</span>
@@ -56,10 +65,37 @@
           <div><h2 class="ranking-title">Call of Duty: Black Ops 1</h2><p>The numbers Mason, What do they Mean?!</p></div>
           <span class="ranking-aside">Shooter · Multiplayer</span>
         </li>
+        <li class="ranking-item" id="rank-cyberpunk-2077">
+          <span class="ranking-number" aria-hidden="true">06</span>
+          <div><h2 class="ranking-title">Cyberpunk 2077</h2><p>A neon city full of danger, choice, and unforgettable characters.</p></div>
+          <span class="ranking-aside">Role-playing · Open world</span>
+        </li>
+        <li class="ranking-item" id="rank-lego-star-wars-the-complete-saga">
+          <span class="ranking-number" aria-hidden="true">07</span>
+          <div><h2 class="ranking-title">Lego Star Wars: The Complete Saga</h2><p>A playful tour through the classic Star Wars stories with plenty of building and humor.</p></div>
+          <span class="ranking-aside">Action-adventure · Co-op</span>
+        </li>
+        <li class="ranking-item" id="rank-red-dead-redemption-2">
+          <span class="ranking-number" aria-hidden="true">08</span>
+          <div><h2 class="ranking-title">Red Dead Redemption 2</h2><p>A richly detailed journey through the final days of the American frontier.</p></div>
+          <span class="ranking-aside">Western · Open world</span>
+        </li>
+        <li class="ranking-item" id="rank-tony-hawk-underground-2">
+          <span class="ranking-number" aria-hidden="true">09</span>
+          <div><h2 class="ranking-title">Tony Hawk Underground 2</h2><p>Fast skating, creative parks, and a chaotic road trip with a memorable crew.</p></div>
+          <span class="ranking-aside">Sports · Skateboarding</span>
+        </li>
+        <li class="ranking-item" id="rank-star-wars-battlefront-2-classic-2005">
+          <span class="ranking-number" aria-hidden="true">10</span>
+          <div><h2 class="ranking-title">Star Wars Battlefront 2 (Classic 2005)</h2><p>Large-scale Star Wars battles with memorable maps, heroes, and space combat.</p></div>
+          <span class="ranking-aside">Shooter · Multiplayer</span>
+        </li>
       </ol>
     </section>
   </main>
 
-  <footer class="site-footer"><span>FIVE GAMES.</span><span>A personal player’s guide</span></footer>
+  <!-- The footer element is an MDN landmark used to mark the end of the page content.
+       It is used here for site branding and identity after the main ranking list. -->
+  <footer class="site-footer"><span>TEN GAMES.</span><span>CIT 384 Project 1</span></footer>
 </body>
 </html>

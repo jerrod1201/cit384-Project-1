@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Short reviews of five favorite video games.">
-  <title>Five Games | Reviews</title>
+  <meta name="description" content="Short reviews of ten favorite video games.">
+  <title>Ten Games | Reviews</title>
   <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="site-name" href="index.html">FIVE GAMES<span>.</span></a>
-    <!-- The nav element groups links to all four pages in the site header. -->
+    <a class="site-name" href="index.html">TEN GAMES<span>.</span></a>
+    <!-- The nav element is an MDN semantic landmark. It groups the main site links together so
+         users can move between the Home, Rankings, Reviews, and About pages in a consistent way. -->
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="rankings.html">Rankings</a>
@@ -19,14 +20,21 @@
     </nav>
   </header>
 
+  <!-- The main element is an MDN landmark that marks the primary content of the page.
+       It helps define the main information area for the reviews section. -->
   <main class="page-shell">
     <section class="intro page-intro">
       <p class="eyebrow">A closer look</p>
       <h1>Why these games stay with me.</h1>
-      <p class="intro-copy">Each pick brings something different to the table. Here are a few details that make each one worth returning to.</p>
+      <p class="intro-copy">Each game brings something different to the table. Here are a few details that make each one worth returning to.</p>
     </section>
 
+    <!-- The section element groups related review content into one logical area.
+         The aria-label attribute gives the section a clear accessible name for screen readers. -->
     <section class="reviews-content" aria-label="Game reviews">
+      <!-- The article element is a semantic MDN block used here for each individual review.
+           The class attribute applies the same styling to every review, and the id attribute makes
+           each review easy to link directly from other pages. -->
       <article class="review" id="marvel-tokon-review">
         <div class="review-meta">01 · Fighting<p>Fight in Legenday 4v4 battles</p></div>
         <div><h2>Marvel Tokon: Fighting Souls</h2><p class="review-summary">My new main fighting game</p><p>Love the game and think it has so much much potential for the future of its lifespan.</p></div>
@@ -47,9 +55,31 @@
       <div class="review-meta">05 · Shooter<p>"I need More AMMUNITION!" - Edward Richtofen</p></div>
         <div><h2>Call of Duty: Black Ops 1</h2><p class="review-summary">One of the greatest of all time</p><p>The game that started it all for me, one of the essential fps shooters and stories to play. Can't forget Zombies!</p></div>
       </article>
+      <article class="review" id="cyberpunk-2077-review">
+        <div class="review-meta">06 · Role-playing<p>Wake up, Samurai</p></div>
+        <div><h2>Cyberpunk 2077</h2><p class="review-summary">A bold world of neon and possibility</p><p>Night City is packed with memorable stories, striking characters, and choices that make every street feel worth exploring.</p></div>
+      </article>
+      <article class="review" id="lego-star-wars-review">
+        <div class="review-meta">07 · Action-adventure<p>May the bricks be with you</p></div>
+        <div><h2>Lego Star Wars: The Complete Saga</h2><p class="review-summary">A funny and nostalgic space adventure</p><p>The game turns the Star Wars films into a charming co-op adventure that is easy to pick up and fun to revisit.</p></div>
+      </article>
+      <article class="review" id="red-dead-redemption-2-review">
+        <div class="review-meta">08 · Western<p>Outlaws for life</p></div>
+        <div><h2>Red Dead Redemption 2</h2><p class="review-summary">A world built for getting lost in</p><p>Its slow-burn story and detailed frontier make every ride, campfire, and quiet conversation feel meaningful.</p></div>
+      </article>
+      <article class="review" id="tony-hawk-underground-2-review">
+        <div class="review-meta">09 · Sports<p>Drop in and cause trouble</p></div>
+        <div><h2>Tony Hawk Underground 2</h2><p class="review-summary">Skateboarding with an unforgettable attitude</p><p>The creative skating, outrageous challenges, and energetic soundtrack make this one of the most entertaining games in the series.</p></div>
+      </article>
+      <article class="review" id="star-wars-battlefront-2-review">
+        <div class="review-meta">10 · Shooter<p>Defend the galaxy</p></div>
+        <div><h2>Star Wars Battlefront 2 (Classic 2005)</h2><p class="review-summary">The ultimate Star Wars battle sandbox</p><p>Its large battles, playable heroes, space missions, and varied maps still make it a satisfying multiplayer experience.</p></div>
+      </article>
     </section>
   </main>
 
-  <footer class="site-footer"><span>FIVE GAMES.</span><span>A personal player’s guide</span></footer>
+  <!-- The footer element is an MDN landmark used to mark the end of the page content.
+       It is used here for site branding and identity after the reviews section. -->
+  <footer class="site-footer"><span>TEN GAMES.</span><span>CIT 384 Project 1</span></footer>
 </body>
 </html>
