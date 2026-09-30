@@ -10,7 +10,7 @@
 <body>
   <header class="site-header">
     <a class="site-name" href="index.html">TEN GAMES<span>.</span></a>
-    <!-- The nav element is an MDN semantic landmark. It groups the main site links together so
+    <!-- The nav element is an MDN semantic landmark, here it groups the main site links together so
          users can move between the pages in a clear and consistent way. -->
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
@@ -47,8 +47,7 @@
         <h2 id="list-heading">Start with the top Ten</h2>
       </div>
       <!-- The ol element is an ordered list from MDN. It is used here because the game entries
-           are intentionally ranked in order. The class attribute applies the same styling to every item,
-           and the id attribute gives each game its own anchor target for direct links. -->
+           are intentionally ranked in order. -->
       <ol class="game-list">
         <li class="game-entry" id="marvel-tokon-fighting-souls">
           <span class="game-genre">Fighting</span>
@@ -108,7 +107,7 @@
        It is used here for site branding and identity after the main content. -->
   <footer class="site-footer"><span>Ten GAMES.</span><span>CIT 384 Project 1</span></footer>
   <script>
-    // This script filters the game list as the user types and updates the number of matching games.
+    // This script makes the live search filter work.
     const searchInput = document.querySelector('#game-search');
     const gameEntries = document.querySelectorAll('.game-entry');
     const searchStatus = document.querySelector('#search-status');

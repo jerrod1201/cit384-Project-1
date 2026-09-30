@@ -33,8 +33,7 @@ a {
 }
 
 .site-header {
-  /* The flexbox layout is a core CSS feature from MDN used here to align the brand
-     and main navigation across the top of every page. This keeps the header easy to
+  /* The flexbox layout is a core CSS feature from MDN used here to keep the header easy to
      read and keeps the layout responsive on smaller screens. */
   min-height: 76px;
   padding: 0 max(6vw, calc((100vw - 1120px) / 2));
@@ -82,8 +81,7 @@ a {
 
 .page-shell {
   /* This centered container keeps the content narrow on large screens while still using the
-     full width of the browser on smaller screens. The min() function is a modern CSS feature
-     that helps keep responsive spacing clean without needing extra wrapper divs. */
+     full width of the browser on smaller screens. */
   width: min(100% - 48px, 1040px);
   margin: 0 auto;
 }
@@ -94,8 +92,7 @@ a {
 }
 
 .intro-home {
-  /* The homepage intro uses CSS Grid to split the section into a text area and a search panel.
-     The two-column layout gives the heading room on the left while keeping the search box aligned
+  /* The homepage intro uses CSS Grid, as three-column layout gives the heading room on the left while keeping the search box aligned
      neatly on the right. */
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
@@ -227,8 +224,7 @@ h1 {
 }
 
 .game-entry {
-  /* Each homepage list item is arranged as a three-column grid: the genre label, the game info,
-     and the review link. This creates a clean, consistent card layout without needing a more
+  /* Each homepage list item is arranged as a three-column grid, this created a clean, consistent card layout without needing a more
      complex nested structure in the HTML. */
   display: grid;
   grid-template-columns: 86px minmax(0, 1fr) auto;
@@ -362,7 +358,7 @@ h1 {
   text-align: right;
 }
 
-/* Fixed thumbnail boxes crop artwork; object-position shifts the crop for specific covers. */
+/* Fixed thumbnail boxes crop artwork, so object-position shifts the crop for specific covers. */
 .game-cover {
   display: block;
   width: 100%;
